@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ShoppingGql
+  devtools:
+    restart:
+      additional-exclude: logs/**
+  graphql:
+    graphiql:
+      enabled: true
+    path: /graphql
+
+server:
+  http2:
+    enabled: true
+
+graphql:
+  playground:
+    enabled: true
+    page-title: Playground
+    endpoint: /graphql
