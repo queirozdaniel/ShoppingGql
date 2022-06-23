@@ -1,6 +1,10 @@
 spring:
   application:
     name: ShoppingGql
+  datasource:
+    url: jdbc:mysql://localhost:3306/shopping?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: toor
   devtools:
     restart:
       additional-exclude: logs/**
@@ -8,6 +12,8 @@ spring:
     graphiql:
       enabled: true
     path: /graphql
+  flyway:
+    locations: classpath:db/migration
 
 server:
   http2:
