@@ -1,6 +1,11 @@
 package com.danielqueiroz.shoppinggql.domain.model
 
+import javax.persistence.*
+
+@Entity
 data class Client(
-    private val name: String,
-    private val email: String
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long? = null,
+    val name: String,
+    val email: String
 )

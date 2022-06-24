@@ -6,5 +6,6 @@ type Client {
 type Query {
     hello: String
     client: Client
+    client(id:ID): Client
     clients: [Client]
 }
