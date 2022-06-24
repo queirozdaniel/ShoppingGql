@@ -4,7 +4,9 @@ import com.danielqueiroz.shoppinggql.domain.model.Client
 
 interface ClientService {
 
-    fun getOneClient(id: Long): Client
-    fun getAllClients(): List<Client>
-    fun saveClient(client: Client): Client
+    fun getOne(id: Long): Client
+    fun getAll(): List<Client>
+    fun save(client: Client): Client
+    fun update(client: Client): Client
+    fun delete(id: Long): Boolean
 }
