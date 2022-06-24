@@ -1,10 +1,7 @@
-type Client {
-    id: ID
-    name: String
-    email: String
+type Query {
+
 }
 
-type Query {
-    client(id:ID): Client
-    clients: [Client]
+type Mutation {
+
 }

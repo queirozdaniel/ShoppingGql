@@ -6,7 +6,7 @@ import graphql.kickstart.tools.GraphQLQueryResolver
 import org.springframework.stereotype.Component
 
 @Component
-class QueryGraphQL(
+class ClientGraphQL(
     private val service: ClientService
 ) : GraphQLQueryResolver {
 
