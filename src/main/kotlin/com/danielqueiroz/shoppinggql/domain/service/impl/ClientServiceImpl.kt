@@ -4,6 +4,7 @@ import com.danielqueiroz.shoppinggql.domain.model.Client
 import com.danielqueiroz.shoppinggql.domain.repository.ClientRepository
 import com.danielqueiroz.shoppinggql.domain.service.ClientService
 import org.springframework.stereotype.Service
+import javax.transaction.Transactional
 
 @Service
 class ClientServiceImpl(
@@ -18,6 +19,10 @@ class ClientServiceImpl(
 
     override fun getAllClients(): List<Client> {
         return repository.findAll()
-        TODO("Not yet implemented")
+    }
+
+    @Transactional
+    override fun saveClient(client: Client): Client {
+        return repository.save(client)
     }
 }

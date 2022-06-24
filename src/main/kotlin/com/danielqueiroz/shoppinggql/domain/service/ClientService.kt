@@ -6,4 +6,5 @@ interface ClientService {
 
     fun getOneClient(id: Long): Client
     fun getAllClients(): List<Client>
+    fun saveClient(client: Client): Client
 }

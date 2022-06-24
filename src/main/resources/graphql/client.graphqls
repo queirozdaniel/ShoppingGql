@@ -9,3 +9,9 @@ extend type Query {
     clients: [Client]
 }
 
+extend type Mutation {
+    createClient(
+        name: String
+        email: String
+    ): Client
+}
