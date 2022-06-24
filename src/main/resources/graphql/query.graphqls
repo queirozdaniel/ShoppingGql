@@ -1,11 +1,10 @@
 type Client {
+    id: ID
     name: String
     email: String
 }
 
 type Query {
-    hello: String
-    client: Client
     client(id:ID): Client
     clients: [Client]
 }

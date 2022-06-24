@@ -10,13 +10,8 @@ class QueryGraphQL(
     private val service: ClientService
 ) : GraphQLQueryResolver {
 
-    fun hello() = "Hello GraphQL"
+    fun client(id: Long) = service.getOneClient(id)
 
-    fun client(): Client = Client(name = "Daniel Queiroz", email = "daniel@gmail.com")
-
-    fun clientById(id: Long) = service.getOneClient(id)
-
-    fun clients(): List<Client> = listOf(Client(1,"John", "j123@gmail.com"),
-                Client(2,"Maria", "mary@gmail.com"))
+    fun clients(): List<Client> = service.getAllClients()
 
 }

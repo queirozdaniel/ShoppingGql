@@ -15,4 +15,9 @@ class ClientServiceImpl(
             RuntimeException("Não encontrou um client com Id informado") //TODO Implementar Exception para NotFound
         }
     }
+
+    override fun getAllClients(): List<Client> {
+        return repository.findAll()
+        TODO("Not yet implemented")
+    }
 }
