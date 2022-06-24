@@ -14,7 +14,11 @@ spring:
     path: /graphql
   flyway:
     locations: classpath:db/migration
-
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
 server:
   http2:
     enabled: true
